@@ -15,7 +15,6 @@ def equacaodiferencial_tempo(Tf,t,Potencia,Hs,As,To,Dp,Kp,Ap,Hp,M,C):
 lista_tempo= np.arange(0,86400*2,1e-2)
 
 
-
 Potencia=2000
 Hs=60
 As=2
