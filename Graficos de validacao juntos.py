@@ -41,8 +41,8 @@ C=41.86
 solucao=odeint(equacaodiferencial_tempo,To,lista_tempo, args=(Potencia,Hs,As,To,Dp,Kp,Ap,Hp,M,C,))
 
 
-plt.plot(lista_tempo,solucao)
-plt.plot(tempo,lista_pontos,"ro")
+plt.plot(lista_tempo,solucao,"g--")
+plt.plot(tempo,lista_pontos)
 plt.xlabel("Tempo(minutos)")
 plt.ylabel("Temperatura(kelvin)")
 plt.grid(True)
