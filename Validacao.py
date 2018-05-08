@@ -14,7 +14,7 @@ def equacaodiferencial_tempo(Tf,t,Potencia,Hs,As,To,Dp,Kp,Ap,Hp,M,C):
 
 lista_tempo= np.arange(0,3,10**-2)
 
-Potencia=100
+Potencia=300
 Hs=60
 As=0.003
 To=20+273
@@ -23,7 +23,8 @@ Kp=0.17
 Ap=0.005
 Hp=0.03
 M=0.720
-C=4186
+C=41.86
+
 
 
 solucao=odeint(equacaodiferencial_tempo,To,lista_tempo, args=(Potencia,Hs,As,To,Dp,Kp,Ap,Hp,M,C,))
