@@ -26,7 +26,7 @@ def equacaodiferencial_tempo(Tf,t,Potencia,Hs,As,To,Dp,Kp,Ap,Hp,M,C):
 
 lista_tempo= np.arange(0,3,10**-2)
 
-Potencia=300
+Potencia=270
 Hs=60
 As=0.003
 To=20+273
@@ -41,8 +41,8 @@ C=41.86
 solucao=odeint(equacaodiferencial_tempo,To,lista_tempo, args=(Potencia,Hs,As,To,Dp,Kp,Ap,Hp,M,C,))
 
 
-plt.plot(lista_tempo,solucao,"g--")
-plt.plot(tempo,lista_pontos)
+plt.plot(lista_tempo,solucao,"go")
+plt.plot(tempo,lista_pontos,"r-")
 plt.xlabel("Tempo(minutos)")
 plt.ylabel("Temperatura(kelvin)")
 plt.grid(True)
