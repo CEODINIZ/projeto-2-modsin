@@ -10,11 +10,11 @@ def equacaodiferencial_tempo(Tf,t,Potencia,Hs,As,To,Dp,Kp,Ap,Hp,M,C):
     dTdt= (x+y+z)/w
 
     return dTdt
-
+#criando a lista tempo
 
 lista_tempo= np.arange(0,3,10**-2)
-
-Potencia=300
+#definindo os valores
+Potencia=270
 Hs=60
 As=0.003
 To=20+273
@@ -25,8 +25,7 @@ Hp=0.03
 M=0.720
 C=41.86
 
-
-
+#fazendo a solução usando o Odeint
 solucao=odeint(equacaodiferencial_tempo,To,lista_tempo, args=(Potencia,Hs,As,To,Dp,Kp,Ap,Hp,M,C,))
 
 
@@ -36,4 +35,3 @@ plt.ylabel("Temperatura(kelvin)")
 plt.grid(True)
 plt.show()
 
-#Potencia,Hs,As,Tf,To,Dp,Kp,Ap,Hp,M,C,
