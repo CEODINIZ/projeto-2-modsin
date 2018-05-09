@@ -15,4 +15,3 @@ plt.ylabel("Temperatura(kelvin)")
 plt.grid(True)
 plt.show()
 
-
